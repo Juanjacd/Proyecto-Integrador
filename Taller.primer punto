@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ */
+
+package com.mycompany.taller;
+
+import java.util.Scanner;
+
+public class Taller {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double descuento = 0;
+        //solicitar el monto de venta
+        System.out.println("Ingrese el monto de venta: ");
+        double montoventa = scanner.nextDouble();
+         if (montoventa < 500) {
+             descuento = 0;
+             System.out.println("no hay descuento");
+         } else if (montoventa <1000) {
+             descuento = montoventa * 0.05;
+             System.out.println("su descuento es del 5%");
+         } else if (montoventa <=7000){
+             descuento = montoventa * 0.11;    
+         } else if (montoventa <= 15000) {
+             descuento = montoventa * 0.18;
+               
+         } else {
+             descuento = montoventa * 0.25;
+         }
+         double montofinal = montoventa - descuento;
+         System.out.println("El descuento es: " + descuento);
+         System.out.println("El monto final a pagar es:" +montofinal);
+       
+       scanner.close();  
+}
+}
